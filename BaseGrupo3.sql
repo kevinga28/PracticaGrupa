@@ -12,7 +12,7 @@ CREATE TABLE arbol (
   tipo_flor VARCHAR(255),
   dureza_madera VARCHAR(255),
   Hojas INT,
-  Altura INT
+  Altura DECIMAL(10,2)
 );
 
 -- Crear un usuario llamado "usuario_practica"
