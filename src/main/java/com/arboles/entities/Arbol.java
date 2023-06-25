@@ -51,21 +51,23 @@ public class Arbol {
         this.dureza_madera = dureza_madera;
     }
 
-    public Integer getNumero() {
-        return numero;
+    public Integer getHojas() {
+        return hojas;
     }
 
-    public void setNumero(Integer numero) {
-        this.numero = numero;
+    public void setHojas(Integer hojas) {
+        this.hojas = hojas;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getAltura() {
+        return Altura;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setAltura(String Altura) {
+        this.Altura = Altura;
     }
+
+    
 
     public String getRuta_imagen() {
         return ruta_imagen;
