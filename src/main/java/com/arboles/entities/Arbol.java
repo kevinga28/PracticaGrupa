@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Arbol {
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     private String ruta_imagen;
@@ -15,7 +15,7 @@ public class Arbol {
     private String tipo_flor;
     private String dureza_madera; 
     private Integer Hojas;
-    private String Altura; 
+    private double Altura; 
     private boolean activo;
     
     public Integer getId() {
@@ -58,11 +58,11 @@ public class Arbol {
         this.Hojas = Hojas;
     }
 
-    public String getAltura() {
+    public double getAltura() {
         return Altura;
     }
 
-    public void setAltura(String Altura) {
+    public void setAltura(double Altura) {
         this.Altura = Altura;
     }
 

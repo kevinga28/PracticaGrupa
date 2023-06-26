@@ -1,26 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.arboles.controllers;
+
+import com.arboles.entities.Arbol;
 import com.arboles.service.IArbolService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class IndexController {
-    private final IArbolService productService;
+    private final IArbolService ArbolService;
 
-    public IndexController(IArbolService productService) {
-        this.productService = productService;
+    public IndexController(IArbolService ArbolService) {
+        this.ArbolService = ArbolService;
     }
 
     @GetMapping("/")
     public String index(Model model) {
-        var productos = this.productService.getAllProducts();
-        model.addAttribute("products", productos);
+        //En esta variable de productos, estan todos los objetos ed la lista de productos
+        var arboles = this.ArbolService.getAllArbol();
+        model.addAttribute("arboles", arboles);
         return "index";
     }
 }

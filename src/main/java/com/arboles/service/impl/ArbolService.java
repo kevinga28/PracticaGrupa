@@ -7,33 +7,29 @@ import com.arboles.db.IArbolRepository;
 import com.arboles.entities.Arbol;
 import com.arboles.service.IArbolService;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
-public class ArbolService {
-
 
 @Service
-public class ProductService implements IArbolService {
+public class ArbolService implements IArbolService{
 
-    private final IArbolRepository productRepository;
 
-    public ProductService(IArbolRepository productRepository) {
-        this.productRepository = productRepository;
+    private final IArbolRepository arbolRepository;
+
+    public ArbolService(IArbolRepository arbolRepository) {
+        this.arbolRepository = arbolRepository;
     }
 
-    public List<Arbol> getAllProducts() {
-        return (List<Arbol>) this.productRepository.findAll();
+    
+    public List<Arbol> getAllArbol() {
+        return (List<Arbol>) this.arbolRepository.findAll();
     }
 
     public void save(Arbol arbol) {
         arbol.setActivo(true);
-        this.productRepository.save(arbol);
+        this.arbolRepository.save(arbol);
     }
 
     public void delete(Arbol arbol) {
-        this.productRepository.delete(arbol);
-    }
-}
-
-    
+        this.arbolRepository.delete(arbol);
+    } 
 }
