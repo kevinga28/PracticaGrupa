@@ -1,340 +1,56 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Header & Footer</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="css/css.css" rel="stylesheet" />
-        <!-- Tuve que poner lo que originalmente puse en un CSS aqui por que solo aquí funcionaba por alguna razón -->
-        <style>
-            *{
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Open Sans', 'Courier New'
-            }
-
-            body{
-                height: 100vh;
-                background-color: none;
-                background-image: url('https://static.vecteezy.com/system/resources/previews/011/550/715/non_2x/forest-tree-hd-nature-wallpapers-free-photo.jpg');
-                background-size: cover;
-                background-position: center;
-            }
-
-            li{
-                list-style: none;
-            }
-
-            .imagen {
-                height: 90px;
-                cursor: pointer;
-            }
-
-            nav {
-                flex: 1;
-                text-align: right;
-            }
-
-            nav ul {
-                display: inline-block;
-                list-style: none;
-                margin-left: 60px;
-                text-align: center;
-            }
-
-            .opciones {
-                width: 50px;
-                cursor: pointer;
-                margin-left: 10px;
-            }
-
-            .links li a{
-                text-decoration: none;
-                color: #ffffff;
-                font-size: 12px;
-                background-color: black;
-                padding: 0.5rem 1rem;
-                border: none;
-                outline: none;
-                border-radius: 20px;
-                cursor: pointer;
-            }
-            /*hover se usa para cuando uno pasa el mouse sobre el texto*/
-            .links li a:hover {
-                color: #26a500;
-            }
-
-            header {
-                position: relative;
-                padding: 0rem;
-                /*rem = relative to the size of the root element*/
-                border-radius: 12px;
-                border: #000000
-
-            }
-
-            .encabezado {
-                width: 100%;
-                height: 100%;
-                padding-left: 4%;
-                padding-right: 4%;
-                min-height: 8vh;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                background-color: #abfc93;
-
-            }
-
-            .encabezado .links{
-                display: flex;
-                gap: 2rem;
-                /*Gap se puede considerar como un espaciado*/
-                text-align: center
-
-            }
-
-            .sections {
-                position: absolute;
-                right: 14%;
-                text-align: center;
-                display: flex;
-                gap: 1rem;
-            }
-
-            .sections li a {
-                text-decoration: none;
-                font-weight: bold;
-                color: #ffffff;
-                font-size: 14px;
-                background-color: #5f5fdd;
-                padding: 0.3rem 0.8rem;
-                border: #000000;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-            .sections li a:hover {
-                color: #5f5fdd;
-                background-color: #ffffff;
-            }
-
-            p{
-                color: #ffffff;
-            }
-
-            footer {
-                background-color: #000000;
-                color: #ffffff;
-                padding: 20px;
-                text-align: center;
-                display: flex;
-                justify-content: space-between;
-            }
-
-            h2{
-                color: #ffffff;
-                text-align: left;
-                font-weight: bold;
-            }
-
-            .Descripcion{
-                text-align: justify;
-                display: flex;
-                padding: 10px;
-                max-width: 580px;
-            }
-
-            .Relleno{
-                text-align: center;
-            }
-
-            h3{
-                color: #ffffff;
-                text-align: center;
-                font-weight: bold;
-            }
-
-            .Alternos{
-                text-align: justify;
-                text-decoration: none;
-            }
-
-            .linksv2 {
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap; /* Añadido */
-                justify-content: space-between;
-                align-items: flex-start;
-                text-align: center;
-                width: 25%;
-                padding: 10px;
-                box-sizing: border-box;
-            }
-
-            .linksv2 h3 {
-                height: 20px;
-            }
-
-
-            .linksv2 .Alternos {
-                margin-top: 10px;
-            }
-
-            .linksv2 .Alternos li {
-                margin-bottom: 5px;
-            }
-
-            .Container{
-                grid-template-columns: auto auto auto;
-                display: grid;
-                gap: 15px;
-            }
-            
-            .copyright{
-                text-align: center;
-                display: flex;
-                padding: 10px;
-                max-width: 580px;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <div class="encabezado">
-                <!-- div.encabezado va a almacenar el logo junto a opciones -->
-                <img src="https://seeklogo.com/images/T/tree-company-logo-970E6A7503-seeklogo.com.png" class="imagen">
-                <nav>
-                    <ul class="links">
-                        <li><a href="#Registro">Registro</a></li>
-                        <li><a href="#Creación">Creación</a></li>
-                        <li><a href="#Modificaciones">Modificaciones</a></li>
-                        <li><a href="#Eliminar">Eliminar</a></li>
-                    </ul>
-                </nav>
-                <!-- nav se supone que muestra las opciones tales como el logueo o crear cuenta al lado -->
-                <img src="https://icons.veryicon.com/png/o/miscellaneous/small-face-icon/help-151.png" class="opciones">
-                <br/>
-                <ul class="sections">
-                    <li><a href="#Login">LOG IN</a></li>
-                    <li><a href="#Signup">SIGN UP</a></li>
-                </ul>
-            </div>
-        </header>
-
-        <div style="padding-left: 20px">
-            <h1 style="color: #ffffff">Prueba</h1>
-            <p class="Relleno">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in
-                tellus a nulla molestie sagittis et convallis turpis. Donec 
-                imperdiet orci quis dolor tincidunt sagittis. Morbi vel nisi sed 
-                purus luctus rhoncus quis eget elit. Phasellus in mauris et mi 
-                dictum consectetur. Aliquam rutrum, nisi sed convallis rutrum, 
-                erat libero congue turpis, quis imperdiet nisl lacus in mauris. 
-                Vivamus auctor eu turpis molestie elementum. Curabitur 
-                scelerisque pretium eros, a vulputate tortor congue eu. 
-                Pellentesque eget eleifend leo. Integer viverra felis eu 
-                malesuada faucibus. Proin sed orci ut urna congue maximus.
-                <br/>
-                Suspendisse placerat volutpat velit. Suspendisse rhoncus mattis 
-                ex, non porta nunc efficitur sit amet. Proin risus sapien, congue
-                eu condimentum vitae, tristique ut nunc. Ut libero erat, 
-                vestibulum a maximus sit amet, placerat in ipsum. Cras dui 
-                tortor, maximus ut nisl et, maximus pharetra neque. Sed vel 
-                tortor vel ex sodales dictum vitae quis lectus. Maecenas 
-                ullamcorper efficitur ante volutpat aliquet. Praesent nec velit 
-                finibus dui tristique elementum. Pellentesque tincidunt quis diam
-                non auctor. Donec lorem ligula, tristique id dolor non, maximus 
-                accumsan est. Nunc sed porttitor ipsum, id faucibus sem. Vivamus 
-                eu eros sed enim laoreet interdum ut sed justo. Integer non lorem
-                vel urna pellentesque egestas sit amet ac massa.
-                <br/>
-                Nulla viverra nisl erat, quis pretium ex efficitur vitae. Nullam 
-                faucibus ornare ex sit amet tincidunt. Duis ac dolor tellus. 
-                Mauris vel mattis nunc. Vestibulum placerat consectetur arcu, 
-                quis finibus tortor. Pellentesque interdum vestibulum 
-                pellentesque. Phasellus viverra, nunc nec suscipit lacinia, est 
-                massa hendrerit turpis, quis dignissim erat tortor non purus. 
-                Aliquam erat volutpat.
-                <br/>
-                Generated 5 paragraphs, 479 words, 3276 bytes of Lorem Ipsum
-                help@lipsum.com
-                Privacy Policy
-            </p>
+<html th:attr="lang=${lang}" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <!-- Llamando el script del head que esta en el template -->
+    <head th:insert="~{template.html :: head}"></head>
+<body>
+    <!-- Hace el llamado al nav que esta en el template -->
+<div th:insert="~{template.html :: nav}"></div>
+<section class="container py-5">
+    <div class="row text-center pt-3">
+        <div class="col-lg-6 m-auto">
+            <button type="button" class="btn btn-primary open-modal"
+                    data-toggle="modal" data-target="#arbolModal">
+                Nuevo Arbol
+            </button>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Flor</th>
+                    <th scope="col">Madera</th>
+                    <th scope="col">Hojas</th>
+                    <th scope="col">Altura</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="arbol : ${arboles}">
+                    <td><span th:text="${arbol.id}"></span></td>
+                    <td><img alt="..." class="card-img-top" th:src="${product.ruta_imagen}"/></td>
+                    <td><span th:text="${arbol.nombre_comun}"> </span></td>
+                    <td><span th:text="${arbol.tipo_flor}"> </span></td>
+                    <td><span th:text="${arbol.dureza_madera}"> </span></td>
+                    <td><span th:text="${arbol.Hojas}"> </span></td>
+                    <td><span th:text="${arbol.Altura}"> </span></td>
+                    <td>
+                        <button type="button" th:attr="idProduct=${product.id}" class="btn btn-primary open-modal"
+                                data-toggle="modal" data-target="#productModal">
+                            edit
+                        </button>
+                        <button type="button" th:attr="idProduct=${product.id}" class="btn btn-danger open-modal btnDeleteProduct">
+                            delete
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </div>
-        <footer>
-            <div class="contenido">
-                <h2>TREE COMPANY</h2>
-                <p class="Descripcion">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce 
-                    in tellus a nulla molestie sagittis et convallis turpis. Donec 
-                    imperdiet orci quis dolor tincidunt sagittis. Morbi vel nisi sed 
-                    purus luctus rhoncus quis eget elit. Phasellus in mauris et mi 
-                    dictum consectetur. Aliquam rutrum, nisi sed convallis rutrum, 
-                    erat libero congue turpis, quis imperdiet nisl lacus in mauris. 
-                    Vivamus auctor eu turpis molestie elementum. Curabitur 
-                    scelerisque pretium eros, a vulputate tortor congue eu. 
-                    Pellentesque eget eleifend leo. Integer viverra felis eu 
-                    malesuada faucibus. Proin sed orci ut urna congue maximus.
-                </p>
+    </div>
+</section>
 
-            </div>
-            <div class="Container">
-                <div class="linksv2">
-                    <h3>Sociales</h3>
-                    <ul class="Alternos">
-                        <li><a href="#Instagram">Instagram</a></li>
-                        <li><a href="#Facebook">Facebook</a></li>
-                        <li><a href="#Twitter">Twitter</a></li>
-                        <li><a href="#Linkedln">Linkedln</a></li>
-                        <li><a href="#GooglePlus">Google+</a></li>
-                    </ul>
-                </div>
-                <div class="linksv2">
-                    <h3>Contactenos</h3>
-                    <ul class="Alternos">
-                        <li><a href="#Email">Correo</a></li>
-                        <li><a href="#ContactoE">Contacto Empresa</a></li>
-                        <li><a href="#Reserva">Reservar cita</a></li>
-                    </ul>
-                </div>
-                <div class="linksv2">
-                    <h3>Informacion</h3>
-                    <ul class="Alternos">
-                        <li><a href="#Origenes">Origenes</a></li>
-                        <li><a href="#Tipos">Tipos de Arboles</a></li>
-                        <li><a href="#Socios">Socios</a></li>
-                        <li><a href="#Semillas">Semillas</a></li>
-                    </ul>
-                </div>
-
-                <div class="linksv2">
-                    <h3>Cuenta</h3>
-                    <ul class="Alternos">
-                        <li><a href="#Login">Iniciar Sesión</a></li>
-                        <li><a href="#Signup">Registrarse</a></li>
-                        <li><a href="#CdC">Configuraciones de cuenta</a></li>
-                        <li><a href="#Cerrar Sesión">Cerrar Sesión</a></li>
-                    </ul>
-                </div>
-
-                <div class="linksv2">
-                    <h3>Nosotros</h3>
-                    <ul class="Alternos">
-                        <li><a href="#Members">Miembros</a></li>
-                        <li><a href="#Blog">Blog</a></li>
-                        <li><a href="#Company">Compañía</a></li>
-                        <li><a href="#Cerrar Sesión">Sobre Nosotros</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                    <p>Copyright © 2023</p>
-                </div>
-        </footer>
-    </body>
+<!-- LLama los scripts del framework y el footer que igualmente se encuentra en el template -->
+<div th:insert="~{template.html :: footer}"></div>
+<div th:insert="~{template.html :: scripts}"></div>
+</body>
 </html>
+
