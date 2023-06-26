@@ -6,19 +6,18 @@ import jakarta.persistence.*;
 @Table(name = "arbol")
 public class Arbol {
     @Id
-    @Column(name = "id_arbol")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-  
+    private String ruta_imagen;
     private String nombre_comun;
     private String tipo_flor;
     private String dureza_madera; 
-    private Integer hojas;
+    private Integer Hojas;
     private String Altura; 
-    private String ruta_imagen;
     private boolean activo;
-
+    
     public Integer getId() {
         return id;
     }
@@ -52,11 +51,11 @@ public class Arbol {
     }
 
     public Integer getHojas() {
-        return hojas;
+        return Hojas;
     }
 
-    public void setHojas(Integer hojas) {
-        this.hojas = hojas;
+    public void setHojas(Integer Hojas) {
+        this.Hojas = Hojas;
     }
 
     public String getAltura() {
@@ -79,7 +78,7 @@ public class Arbol {
 
     public boolean isActivo() {
         return activo;
-    }
+}
 
     public void setActivo(boolean activo) {
         this.activo = activo;

@@ -12,6 +12,7 @@
                     data-toggle="modal" data-target="#arbolModal">
                 Nuevo Arbol
             </button>
+
             <table class="table">
                 <thead>
                 <tr>
@@ -22,28 +23,20 @@
                     <th scope="col">Hojas</th>
                     <th scope="col">Altura</th>
                 </tr>
+                    
                 </thead>
                 <tbody>
-                <tr th:each="arbol : ${arboles}">
+              <tr th:each="arbol : ${arboles}">
                     <td><span th:text="${arbol.id}"></span></td>
-                    <td><img alt="..." class="card-img-top" th:src="${product.ruta_imagen}"/></td>
+                    <td><img alt="..." class="card-img-top" th:src="${arbol.ruta_imagen}"/></td>
                     <td><span th:text="${arbol.nombre_comun}"> </span></td>
                     <td><span th:text="${arbol.tipo_flor}"> </span></td>
-                    <td><span th:text="${arbol.dureza_madera}"> </span></td>
                     <td><span th:text="${arbol.Hojas}"> </span></td>
                     <td><span th:text="${arbol.Altura}"> </span></td>
-                    <td>
-                        <button type="button" th:attr="idProduct=${product.id}" class="btn btn-primary open-modal"
-                                data-toggle="modal" data-target="#productModal">
-                            edit
-                        </button>
-                        <button type="button" th:attr="idProduct=${product.id}" class="btn btn-danger open-modal btnDeleteProduct">
-                            delete
-                        </button>
-                    </td>
-                </tr>
+           </tr>
                 </tbody>
             </table>
+
         </div>
     </div>
 </section>
@@ -51,6 +44,7 @@
 <!-- LLama los scripts del framework y el footer que igualmente se encuentra en el template -->
 <div th:insert="~{template.html :: footer}"></div>
 <div th:insert="~{template.html :: scripts}"></div>
+
 </body>
 </html>
 

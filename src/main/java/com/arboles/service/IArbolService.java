@@ -7,8 +7,8 @@ import com.arboles.entities.Arbol;
 public interface IArbolService {
      List<Arbol> getAllProducts();
 
-    void save(Arbol product);
+    void save(Arbol arbol);
 
-    void delete(Arbol product);
+    void delete(Arbol arbol);
     
 }
